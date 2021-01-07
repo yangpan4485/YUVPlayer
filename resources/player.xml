@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="960,720" mininfo="960,720" maxinfo="960,720" caption="0,0,0,32" sizebox="4,4,4,4">
+  <Font id="0" shared="true" name="宋体" size="18" bold="false" underline="false" italic="false" />
+  <Font id="1" shared="true" name="宋体" size="20" bold="false" underline="false" italic="false" />
+  <Font id="2" shared="true" name="宋体" size="16" bold="false" underline="false" italic="false" />
+  <Default shared="true" name="Button" value=" height=&quot;30&quot; width=&quot;100&quot; normalimage=&quot;file=&apos;common/button_normal.png&apos;&quot; hotimage=&quot;file=&apos;common/button_hover.png&apos;&quot; pushedimage=&quot;file=&apos;common/button_pushed.png&apos;&quot; font=&quot;0&quot;" />
+
+  <VerticalLayout>  <!-- 整个窗口使用 VerticalLayout 布局 -->
+    <VerticalLayout bkcolor="#FFDFFDF0" float="true" pos="0,0,960,120">
+      <Label name= "fileLabel" text="选择文件：" float="true" pos="25,20,0,0" width="90" height="40" normaltextcolor="white" font="0"/>
+      <Edit name="fileEdit" text="" float="true" pos="115,25,0,0" width="550" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="0"/>
+      <Button name="btnFile" text="浏览" float="true" pos="685,25,0,0" width="100" height="30"/>
+
+      <Label name= "widthLabel" text="宽(Width)：" float="true" pos="25,70,0,0" width="90" height="40" normaltextcolor="white" font="0"/>
+      <Edit name="widthEdit" text="" float="true" pos="120,75,0,0" width="80" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="0"/>
+      <Label name= "heightLabel" text="高(Height)：" float="true" pos="230,70,0,0" width="100" height="40" normaltextcolor="white" font="0"/>
+      <Edit name="heightEdit" text="" float="true" pos="335,75,0,0" width="80" height="30" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="0"/>
+      <Label name= "formatLabel" text="格式(Format)：" float="true" pos="445,70,0,0" width="120" height="40" normaltextcolor="white" font="0"/>
+      <Combo name="formatType" pos="570,75,0,0" width="95" height="30" float="true" textcolor="#FFAAFFFF" normalimage=" file='common/combo_nor.bmp' " hotimage=" file='common/combo_over.bmp' " pushedimage=" file='common/combo_over.bmp' " itemfont="2" >
+        <ListLabelElement text=" I420" height="30" selected="true" itemfont="2"/>
+        <ListLabelElement text=" NV12" height="30" itemfont="2"/>
+        <ListLabelElement text=" NV21" height="30" itemfont="2"/>
+      </Combo>
+
+      <Button name="btnStart" text="开始播放" float="true" pos="685,75,0,0" width="100" height="30"/>
+    </VerticalLayout>
+    <VerticalLayout bkcolor="#FFDFFDF0" float="true" pos="0,120,960,580" height="460">
+      <MyWindow name="videoDisplay" float="true" pos="0,0,960,460"/>
+    </VerticalLayout>
+    <VerticalLayout bkcolor="#FFDFFDF0" float="true" pos="0,580,960,720">
+      <Button name="btnPlay" text="播放" float="true" visible="false" pos="330,20,430,50"/>
+      <Button name="btnPause" text="暂停" float="true" visible="false" pos="460,20,560,50"/>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>
